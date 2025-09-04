@@ -1,5 +1,7 @@
 # Retro SRT Vocabulary Extractor
 
+[![pages-build-deployment](https://github.com/mdnadeemm/Mvocab/actions/workflows/pages.yml/badge.svg)](https://github.com/mdnadeemm/Mvocab/actions/workflows/pages.yml)
+
 Live site: https://mdnadeemm.github.io/Mvocab/
 
 A minimal retro-style web application for extracting and learning vocabulary from SRT subtitle files.
