@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro SRT Vocabulary Extractor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Retro SRT Vocabulary Extractor</h1>
+            <div class="upload-controls">
+                <input type="file" id="fileInput" accept=".srt" />
+                <button id="processBtn">Process File</button>
+            </div>
+        </header>
+        
+        <div class="tabs">
+            <button id="wordTab" class="tab active">Word Definitions</button>
+            <button id="sentenceTab" class="tab">Sentence Translations</button>
+            <button id="frequencyTab" class="tab">Word Frequency</button>
+            <button id="complexityTab" class="tab">Language Complexity</button>
+            <button id="collocationTab" class="tab">Collocations</button>
+        </div>
+        
+        <main class="main-content">
+            <div id="wordContent" class="content-area">
+                <div class="vocab-section">
+                    <div class="word-list-container">
+                        <h2>Vocabulary</h2>
+                        <ul id="wordList"></ul>
+                    </div>
+                    
+                    <div class="definition-container">
+                        <h2>Definition</h2>
+                        <div id="definitionArea">
+                            <p>Select a word to see its definition.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="sentenceContent" class="content-area" style="display: none;">
+                <div class="sentence-section">
+                    <h2>Sentence Translations</h2>
+                    <div id="sentenceArea">
+                        <p>Process a file to see sentence translations.</p>
+                    </div>
+                    <div id="paginationControls" class="pagination-controls" style="display: none;">
+                        <button id="prevPage" class="pagination-btn">Previous</button>
+                        <span id="pageInfo"></span>
+                        <button id="nextPage" class="pagination-btn">Next</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="frequencyContent" class="content-area" style="display: none;">
+                <div class="analysis-section">
+                    <h2>Word Frequency Analysis</h2>
+                    <div id="frequencyArea">
+                        <p>Process a file to see word frequency analysis.</p>
+                    </div>
+                    <div id="frequencyLoading" class="tab-loading" style="display: none;">
+                        <div class="loading-content">
+                            <h3>Loading NLP Model</h3>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div id="frequencyProgressFill" class="progress-fill"></div>
+                                </div>
+                                <div id="frequencyProgressText" class="progress-text">0%</div>
+                            </div>
+                            <p id="frequencyLoadingMessage">Initializing model...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="complexityContent" class="content-area" style="display: none;">
+                <div class="analysis-section">
+                    <h2>Language Complexity</h2>
+                    <div id="complexityArea">
+                        <p>Process a file to see language complexity analysis.</p>
+                    </div>
+                    <div id="complexityLoading" class="tab-loading" style="display: none;">
+                        <div class="loading-content">
+                            <h3>Loading NLP Model</h3>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div id="complexityProgressFill" class="progress-fill"></div>
+                                </div>
+                                <div id="complexityProgressText" class="progress-text">0%</div>
+                            </div>
+                            <p id="complexityLoadingMessage">Initializing model...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="collocationContent" class="content-area" style="display: none;">
+                <div class="analysis-section">
+                    <h2>Collocation Analysis</h2>
+                    <div id="collocationArea">
+                        <p>Process a file to see collocation analysis.</p>
+                    </div>
+                    <div id="collocationLoading" class="tab-loading" style="display: none;">
+                        <div class="loading-content">
+                            <h3>Loading NLP Model</h3>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div id="collocationProgressFill" class="progress-fill"></div>
+                                </div>
+                                <div id="collocationProgressText" class="progress-text">0%</div>
+                            </div>
+                            <p id="collocationLoadingMessage">Initializing model...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="https://unpkg.com/wink-nlp@2.1.0/dist/wink-nlp-browser-min.js"></script>
+    <script src="https://unpkg.com/wink-eng-lite-web-model@1.5.0/dist/wink-eng-lite-web-model.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

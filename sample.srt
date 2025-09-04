@@ -1,0 +1,19 @@
+1
+00:00:01,000 --> 00:00:04,000
+Hello world! This is a sample subtitle file.
+
+2
+00:00:05,000 --> 00:00:08,000
+It contains vocabulary words for language learning.
+
+3
+00:00:09,000 --> 00:00:12,000
+The application will extract these words and show their definitions.
+
+4
+00:00:13,000 --> 00:00:16,000
+You can upload your own SRT files to learn new vocabulary.
+
+5
+00:00:17,000 --> 00:00:20,000
+The retro interface makes language learning enjoyable.
